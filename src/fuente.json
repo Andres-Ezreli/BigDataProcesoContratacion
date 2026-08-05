@@ -1,0 +1,34 @@
+{
+  "_comentario": "Unicos datos de entrada. Vienen de la ficha T1 del equipo (S01) y de su consolidacion en T2. Cambien estos valores y vuelvan a ejecutar proyeccion.py. Cada campo cita su origen en el campo _origen_* correspondiente.",
+
+  "fuente": "SECOP II - Procesos de Contratacion (datos.gov.co / p6dx-8zbt)",
+  "_origen_fuente": "T2 scripts/proyeccion.py, bloque ENTRADAS. Fuente unica consolidada del equipo.",
+
+  "licencia": "Datos Abiertos de Colombia - Ley 1712 de 2014, uso libre con atribucion",
+  "_origen_licencia": "T2 scripts/proyeccion.py, bloque ENTRADAS. NO verificada contra el portal ni en T1 ni en T2: es el unico de los cuatro datos de ficha sin evidencia medida.",
+
+  "formato": "CSV UTF-8 delimitado por comas, esquema plano, 59 columnas",
+  "_origen_formato": "T2 ENTRADAS (formato_declarado). El conteo de 59 columnas y su reparto (44 object, 14 int64, 1 float64) esta medido en T1 _resultados.json, mediciones[SECOP II].",
+
+  "volumen_actual_gb": 9.2809,
+  "_origen_volumen": "DEDUCIDO, no escrito en ninguna parte. Muestra real de 200.000 filas = 0,194714 GiB en disco (T1 _resultados.json, tamano_disco_gb, archivo data/raw/secop_sample.csv), escalada por 8.878.158/200.000 = 44,39079. El total de filas es count(*) contra la API Socrata verificado el 2026-07-24 (T1 evidencia_portal.secop_total_filas). Da 8,6435 GiB = 9,2809 GB decimales (T2 intermedios.S0_gib / S0_gb). Aqui va la decimal porque el campo se llama _gb y el costo se factura por GB decimal.",
+
+  "crecimiento_mensual": 0.009786,
+  "_origen_crecimiento": "DEDUCIDO, no escrito en ninguna parte. CAGR anual 2023->2025 sobre la serie real de filas publicadas en el portal (T1 evidencia_portal.secop_serie_anual): 1.531.557 -> 1.934.805 filas en 2 anios = 12,3963% anual. Mensual = (1+0,123963)^(1/12)-1 = 0,9786%. Comprobacion: (1+0,009786)^12 = 1,123963. Se excluye 2021-2022 porque refleja la migracion de SECOP I a SECOP II, no crecimiento organico. Cota alta declarada en T1: CAGR 2021-2025 = 31,2% anual.",
+
+  "meses_proyeccion": 12,
+  "_origen_meses": "Horizonte fijado por el enunciado de T3.",
+
+  "tamano_archivo_tipico_mb": 96.41,
+  "_origen_tamano_archivo": "Escenario de particion mensual modelado en T2 (resultados/proyeccion.json, bloques.bloques_por_archivo_mensual = [1]*12). 96,41 MiB es el incremento medido del mes 12 (T2 intermedios.incremento_mes_12_mib); el del mes 1 es 86,62 MiB. Se toma el mes 12 por ser el caso mayor. Unidad MiB, igual que tamano_bloque_mb, para que el cociente de bloques sea homogeneo.",
+
+  "tamano_bloque_mb": 128,
+  "_origen_tamano_bloque": "Tamano de bloque HDFS por defecto, 128 MiB. Mismo valor usado en T2 (ENTRADAS.bloque_mib).",
+
+  "factores_replica": [1, 2, 3],
+
+  "costo_gb_mes": 0.023,
+  "_origen_costo": "T2 ENTRADAS.precio_nube_usd_gb_mes = 0,023 USD por GB-mes. Con este precio T2 obtuvo 2,88 USD/anio a R=1, cifra que esta proyeccion debe reproducir.",
+
+  "moneda": "USD"
+}
