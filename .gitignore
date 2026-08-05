@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# Datos: si algun dia se traen muestras a este repo, no se versionan.
+# Se vuelven a descargar con los scripts y pueden superar el limite de
+# 100 MB por archivo que impone GitHub.
+data/raw/*
+!data/raw/LEEME.txt
+data/synthetic/*
+*.zip
+
+# Sistema operativo y editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*~
+
+# Word: archivos temporales de bloqueo
+~$*.docx
+~$*.xlsx
+~$*.pptx
