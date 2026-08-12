@@ -28,4 +28,4 @@ El enunciado permite el uso de asistentes de IA para apoyar el cálculo y la red
 
 Todas las cifras de la tabla de proyección se recalcularon manualmente. El procedimiento de verificación está en `docs/proyeccion.md`, sección 2, subsección *Verificación a mano*.
 
-Firman: [[COMPLETAR: los tres integrantes]]
+Firman: [[Juan Andres Linero Bonnet,Gabriela Garay Beltran,Kevin Enrique Darchagan Chajin]]
