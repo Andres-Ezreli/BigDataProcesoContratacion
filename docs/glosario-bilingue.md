@@ -12,7 +12,7 @@ Glosario del repositorio de equipo. Cada sesión agrega términos; no se borran 
 | **Replication lag** | Retardo de réplica | El intervalo durante el cual un seguidor todavía no ha aplicado una escritura que el líder ya confirmó. Mientras dura, una lectura contra ese seguidor devuelve un valor desactualizado. Es el costo directo de replicar de forma asíncrona. |
 | **Eventual consistency** | Consistencia eventual | Garantía según la cual, si las escrituras cesan, todas las réplicas convergen al mismo valor. No dice *cuándo*: es una promesa sobre el estado final, no sobre ninguna lectura intermedia. |
 
-**Nota de lectura para el reactivo del cuestionario.** Kleppmann distingue tres razones para replicar —tolerancia a fallos, cercanía geográfica al lector y escalar el volumen de lecturas— y sostiene que la dificultad no está en copiar el dato sino en manejar los cambios sobre las copias. Es la distinción que suele evaluarse.
+**Nota de lectura para el reactivo del cuestionario:** Kleppmann distingue tres razones para replicar —tolerancia a fallos, cercanía geográfica al lector y escalar el volumen de lecturas— y sostiene que la dificultad no está en copiar el dato sino en manejar los cambios sobre las copias. Es la distinción que suele evaluarse.
 
 ---
 
