@@ -5,10 +5,10 @@ IFPN0025 · Big Data e Ingeniería de Datos · Universidad Ean
 
 | | |
 |---|---|
-| Equipo | [[COMPLETAR: integrante 1, integrante 2, integrante 3]] |
+| Equipo | [[Juan Andres Linero Bonnet, Gabriela Garay Beltran, Kevin Enrique Darghan Chajin]] |
 | Repositorio | [[COMPLETAR: URL del repositorio consolidado]] |
 | Commit | [[COMPLETAR: identificador del último commit]] |
-| Fecha | 2026-08-04 (fecha de ejecución de la proyección; ajústenla si entregan otro día) |
+| Fecha | 2026-08-12  |
 
 ---
 
