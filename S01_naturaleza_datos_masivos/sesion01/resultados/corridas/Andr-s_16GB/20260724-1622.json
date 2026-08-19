@@ -1,0 +1,345 @@
+{
+  "equipo": {
+    "etiqueta": "Andr-s_16GB",
+    "hostname": "Andrés",
+    "so": "Windows 11",
+    "python": "3.14.2",
+    "pandas": "2.3.3",
+    "ram_total_gb": 15.64,
+    "ram_nominal_gb": 16,
+    "ram_disponible_gb": 1.25,
+    "fraccion_consumida_so": 0.9203,
+    "momento": "2026-07-24 16:13"
+  },
+  "fallos_de_carga": {},
+  "geih_diccionario": {
+    "periodo": "",
+    "columnas_segun_diccionario": null,
+    "columnas_leidas_por_pandas": 1,
+    "coinciden": null,
+    "archivo": "LEEME.txt"
+  },
+  "acueducto": {
+    "medidores": 5000,
+    "filas_muestra": 840000,
+    "k": 4.71,
+    "bytes_por_fila": 51.8,
+    "filas_por_anio": 43800000,
+    "S0_anio_gb": 2.111,
+    "ram_necesaria_anio_gb": 9.95,
+    "ram_necesaria_mes_gb": 0.83,
+    "s0_muestra_gb": 0.04049,
+    "t_8 GB_g10": -33.59,
+    "t_8 GB_g20": -17.56,
+    "t_8 GB_g40": -9.51,
+    "t_16 GB_g10": -26.32,
+    "t_16 GB_g20": -13.76,
+    "t_16 GB_g40": -7.45,
+    "t_medido (16 GB)_g10": -26.56,
+    "t_medido (16 GB)_g20": -13.88,
+    "t_medido (16 GB)_g40": -7.52
+  },
+  "generado": "2026-07-24 16:22",
+  "modo": "real",
+  "filas_solicitadas": 200000,
+  "memoria": {
+    "total_gb": 15.64,
+    "disponible_gb": 0.79,
+    "fraccion_consumida_so": 0.9494,
+    "escenarios": {
+      "8 GB": 0.4,
+      "16 GB": 0.81,
+      "medido (16 GB)": 0.79
+    }
+  },
+  "mediciones": [
+    {
+      "fuente": "SECOP II",
+      "filas": 200000,
+      "columnas": 59,
+      "columnas_texto": 44,
+      "proporcion_texto": 0.746,
+      "tipos": {
+        "object": 44,
+        "int64": 14,
+        "float64": 1
+      },
+      "tamano_disco_gb": 0.213465,
+      "mb_en_memoria": 615.77,
+      "k": 2.82,
+      "filas_fuente_completa": 8878158,
+      "factor_proyeccion": 44.39,
+      "S0_proyectado_gb": 9.4759,
+      "memoria_necesaria_gb": 26.722
+    },
+    {
+      "fuente": "IDEAM",
+      "filas": 200000,
+      "columnas": 12,
+      "columnas_texto": 7,
+      "proporcion_texto": 0.583,
+      "tipos": {
+        "object": 7,
+        "float64": 3,
+        "int64": 2
+      },
+      "tamano_disco_gb": 0.033556,
+      "mb_en_memoria": 98.32,
+      "k": 2.86,
+      "filas_fuente_completa": 55469050,
+      "factor_proyeccion": 277.35,
+      "S0_proyectado_gb": 9.3066,
+      "memoria_necesaria_gb": 26.6169
+    },
+    {
+      "fuente": "GEIH",
+      "filas": 0,
+      "columnas": 1,
+      "columnas_texto": 1,
+      "proporcion_texto": 1.0,
+      "tipos": {
+        "object": 1
+      },
+      "tamano_disco_gb": 0.0,
+      "mb_en_memoria": 0.0,
+      "k": 1.65,
+      "filas_fuente_completa": 0,
+      "factor_proyeccion": 1.0,
+      "S0_proyectado_gb": 0.0,
+      "memoria_necesaria_gb": 0.0
+    }
+  ],
+  "extras": {
+    "SECOP II": {
+      "veracidad": {
+        "prop_nulos_media": 0.1275,
+        "prop_nulos_max": 1.0,
+        "columna_mas_nula": "fecha_de_publicacion_fase",
+        "columnas_100pct_nulas": 1,
+        "columnas_sobre_50pct_nulas": 8,
+        "filas_duplicadas_completas": 3226,
+        "prop_filas_duplicadas": 0.0161,
+        "duplicados_de_clave": 6972,
+        "prop_duplicados_clave": 0.0349,
+        "filas_evaluadas": 200000
+      },
+      "velocidad": {
+        "primer_registro": "2015-06-03 00:00:00+00:00",
+        "ultimo_registro": "2026-07-23 00:00:00+00:00",
+        "span_horas": 97632.0,
+        "registros_por_hora_observados": 2.02,
+        "latencia_dias_hasta_hoy": 1.89,
+        "frecuencia_declarada": "continua / diaria"
+      },
+      "variedad": {
+        "tipos_distintos": 3,
+        "n_columnas": 59,
+        "n_columnas_texto": 44,
+        "largo_medio_texto_global": 24.79,
+        "columnas_texto_mas_largas": [
+          [
+            "descripci_n_del_procedimiento",
+            225.3
+          ],
+          [
+            "urlproceso",
+            96.6
+          ],
+          [
+            "nombre_del_procedimiento",
+            87.5
+          ],
+          [
+            "entidad",
+            37.9
+          ],
+          [
+            "justificaci_n_modalidad_de",
+            32.8
+          ]
+        ],
+        "columnas_texto_libre_>80_chars": 3
+      },
+      "segundos_carga": 18.18,
+      "ruta": "data\\raw\\secop_sample.csv"
+    },
+    "IDEAM": {
+      "veracidad": {
+        "prop_nulos_media": 0.0,
+        "prop_nulos_max": 0.0,
+        "columna_mas_nula": "codigoestacion",
+        "columnas_100pct_nulas": 0,
+        "columnas_sobre_50pct_nulas": 0,
+        "filas_duplicadas_completas": 0,
+        "prop_filas_duplicadas": 0.0,
+        "duplicados_de_clave": 199705,
+        "prop_duplicados_clave": 0.9985,
+        "filas_evaluadas": 200000
+      },
+      "velocidad": {
+        "primer_registro": "2026-06-01 00:00:00+00:00",
+        "ultimo_registro": "2026-06-10 22:46:00+00:00",
+        "span_horas": 238.77,
+        "registros_por_hora_observados": 837.64,
+        "latencia_dias_hasta_hoy": 43.94,
+        "frecuencia_declarada": "horaria por estacion, publicacion diaria"
+      },
+      "variedad": {
+        "tipos_distintos": 3,
+        "n_columnas": 12,
+        "n_columnas_texto": 7,
+        "largo_medio_texto_global": 14.88,
+        "columnas_texto_mas_largas": [
+          [
+            "descripcionsensor",
+            30.7
+          ],
+          [
+            "fechaobservacion",
+            23.0
+          ],
+          [
+            "nombreestacion",
+            19.2
+          ],
+          [
+            "zonahidrografica",
+            10.5
+          ],
+          [
+            "departamento",
+            10.1
+          ]
+        ],
+        "columnas_texto_libre_>80_chars": 0
+      },
+      "segundos_carga": 2.05,
+      "ruta": "data\\raw\\ideam_sample.csv"
+    },
+    "GEIH": {
+      "veracidad": {
+        "prop_nulos_media": NaN,
+        "prop_nulos_max": NaN,
+        "columna_mas_nula": "nan",
+        "columnas_100pct_nulas": 0,
+        "columnas_sobre_50pct_nulas": 0,
+        "filas_duplicadas_completas": 0,
+        "prop_filas_duplicadas": NaN,
+        "filas_evaluadas": 0
+      },
+      "velocidad": {
+        "nota": "sin columna temporal"
+      },
+      "variedad": {
+        "tipos_distintos": 1,
+        "n_columnas": 1,
+        "n_columnas_texto": 1,
+        "largo_medio_texto_global": NaN,
+        "columnas_texto_mas_largas": [
+          [
+            "Descomprima aqui el paquete mensual de la GEIH bajado de dane.gov.co/microdatos",
+            NaN
+          ]
+        ],
+        "columnas_texto_libre_>80_chars": 0
+      },
+      "segundos_carga": 0.02,
+      "ruta": "data\\raw\\geih\\LEEME.txt"
+    }
+  },
+  "g": {
+    "SECOP II": {
+      "g": 0.124,
+      "metodo": "historico medido",
+      "detalle": "CAGR 2023-2025 de la serie real de SECOP II (1,531,557 -> 1,934,805 filas/ano). CAGR 2021-2025 = 31.2% se reporta como cota alta."
+    },
+    "IDEAM": {
+      "g": 0.08,
+      "metodo": "supuesto declarado",
+      "detalle": "No hay serie historica de tamano publicada. El volumen crece con el numero de estaciones-sensor activas, no con el tiempo. Se supone 8% anual de expansion de red. Es el numero mas debil del entregable y se declara."
+    },
+    "GEIH": {
+      "g": 0.03,
+      "metodo": "supuesto documentado",
+      "detalle": "El archivo de un periodo no crece; crece el acumulado, y lo hace de forma LINEAL, no geometrica. Se usa 3% por el crecimiento de la muestra y de columnas entre rediseños. La formula sobreestima aqui: se declara."
+    }
+  },
+  "umbrales": {
+    "SECOP II": {
+      "8 GB": -35.84,
+      "16 GB": -29.91,
+      "medido (16 GB)": -30.11
+    },
+    "IDEAM": {
+      "8 GB": -54.39,
+      "16 GB": -45.38,
+      "medido (16 GB)": -45.68
+    },
+    "GEIH": {
+      "8 GB": Infinity,
+      "16 GB": Infinity,
+      "medido (16 GB)": Infinity
+    }
+  },
+  "sensibilidad_g": {
+    "SECOP II": {
+      "1%": -351.4,
+      "2%": -176.6,
+      "4%": -89.1,
+      "8%": -45.4,
+      "16%": -23.6,
+      "32%": -12.6
+    },
+    "IDEAM": {
+      "1%": -351.0,
+      "2%": -176.4,
+      "4%": -89.0,
+      "8%": -45.4,
+      "16%": -23.5,
+      "32%": -12.6
+    },
+    "GEIH": {
+      "1%": Infinity,
+      "2%": Infinity,
+      "4%": Infinity,
+      "8%": Infinity,
+      "16%": Infinity,
+      "32%": Infinity
+    }
+  },
+  "sensibilidad_k": {
+    "k x0.5": -24.0,
+    "k x1.0": -29.9,
+    "k x2.0": -35.8,
+    "k x4.0": -41.8
+  },
+  "checks_nivel1": {
+    "Hay exactamente 3 fuentes medidas": true,
+    "Todos los k son mayores que 1": true,
+    "Los tres k son distintos": true,
+    "No hay tamanos de disco en cero": false,
+    "mediciones.csv tiene 9 columnas y 3 filas": true,
+    "La fuente con mas texto tiene el k mas alto": false
+  },
+  "evidencia_portal": {
+    "secop_serie_anual": {
+      "2015": 5528,
+      "2016": 9904,
+      "2017": 43728,
+      "2018": 194742,
+      "2019": 186082,
+      "2020": 419702,
+      "2021": 652937,
+      "2022": 1038591,
+      "2023": 1531557,
+      "2024": 1670367,
+      "2025": 1934805,
+      "2026": 1060386
+    },
+    "secop_total_filas": 8878158,
+    "secop_nulos_fecha_publicacion": 8811110,
+    "ideam_registros_por_dia": 21710,
+    "g_secop_2021_2025": 0.312,
+    "g_secop_2023_2025": 0.124
+  }
+}

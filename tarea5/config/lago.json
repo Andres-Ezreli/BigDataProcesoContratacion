@@ -1,0 +1,49 @@
+{
+  "_comentario": "UNICO archivo de configuracion de T5. Todo lo demas se deriva de aqui: nombres de cubos, rutas, fuente y volumen. Ningun nombre de cubo ni ninguna ruta esta escrita a mano dentro del codigo. Cambien estos valores y vuelvan a ejecutar.",
+
+  "almacenamiento": {
+    "_nota": "El endpoint apunta al servicio del docker-compose.yml. La region es la que MinIO usa por defecto; no la cambien salvo que cambien tambien el docker-compose.",
+    "endpoint_url": "http://localhost:9000",
+    "region": "us-east-1",
+    "prefijo_cubos": "lago",
+    "capas": ["cruda", "refinada", "curada"],
+    "versionado_por_capa": {
+      "cruda": true,
+      "refinada": false,
+      "curada": false
+    },
+    "_nota_versionado": "Solo la cruda lleva versionado. Es la capa que no se puede perder: refinada y curada se regeneran desde ella con un script, la cruda no se regenera si el portal cambia o retira el dato."
+  },
+
+  "fuente": {
+    "_nota": "La fuente consolidada del equipo, la misma de T1 a T4. El slug es lo que aparece en la ruta del objeto: minusculas ASCII, digitos y guion bajo, sin acentos ni espacios, porque es parte de una clave S3 y otra persona tiene que poder teclearla sin dudar.",
+    "slug": "secop2_procesos",
+    "nombre": "SECOP II - Procesos de Contratacion",
+    "organismo": "Agencia Nacional de Contratacion Publica - Colombia Compra Eficiente",
+    "portal": "https://www.datos.gov.co/d/p6dx-8zbt",
+    "dataset_id": "p6dx-8zbt",
+    "endpoint_datos": "https://www.datos.gov.co/resource/p6dx-8zbt.csv",
+    "licencia": "CC BY-SA 4.0 (CC_40_BY_SA)",
+    "atribucion": "Agencia Nacional de Contratacion Publica - Colombia Compra Eficiente, Bogota D.C.",
+    "formato": "csv",
+    "extension": "csv",
+    "columna_fecha_negocio": "fecha_de_publicacion_del",
+    "_nota_columna_fecha": "La fecha del NEGOCIO. No se usa para particionar la cruda (ver docs/T5_lago.md, seccion 4); se usa para reparticionar la refinada en la sesion 6."
+  },
+
+  "descarga": {
+    "_nota": "filas_a_descargar controla el tamano del lote. 200000 reproduce exactamente la muestra medida en T1 (~200 MB). 50000 es el valor por defecto para que la tarea corra rapido en cualquier conexion. orden=:id fija el orden del portal para que dos descargas del mismo dia devuelvan las mismas filas.",
+    "filas_a_descargar": 50000,
+    "filas_por_pagina": 25000,
+    "orden": ":id",
+    "tiempo_espera_s": 180,
+    "reintentos": 4,
+    "espera_entre_reintentos_s": 5
+  },
+
+  "ingesta": {
+    "_nota": "zona_horaria_particion=UTC es deliberado: la particion tiene que dar la misma ruta sin importar desde que huso horario corra el script. Un integrante en Bogota y otro en Madrid ingestando el mismo instante deben escribir en la misma carpeta.",
+    "zona_horaria_particion": "UTC",
+    "sufijo_manifiesto": ".manifiesto.json"
+  }
+}

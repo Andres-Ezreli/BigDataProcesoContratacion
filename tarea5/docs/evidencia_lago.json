@@ -1,0 +1,237 @@
+{
+  "_generado_por": "src/ingesta/verificar_lago.py",
+  "_no_editar": "Se regenera en cada corrida.",
+  "instante_utc": "2026-08-19T17:28:01.575511+00:00",
+  "cubo_cruda": "lago-cruda",
+  "veredicto": "PASA",
+  "criterios": [
+    {
+      "numero": 1,
+      "texto": "El dato crudo esta en la capa cruda bajo `<fuente>/anio=YYYY/mes=MM/dia=DD/`",
+      "comprobaciones": [
+        1,
+        3,
+        5
+      ],
+      "resultado": "PASA"
+    },
+    {
+      "numero": 2,
+      "texto": "La carga es un script reproducible con boto3, reejecutable sin duplicar ni romper",
+      "comprobaciones": [
+        9
+      ],
+      "resultado": "PASA"
+    },
+    {
+      "numero": 3,
+      "texto": "El versionado esta activo en la capa cruda y se evidencia",
+      "comprobaciones": [
+        2,
+        7
+      ],
+      "resultado": "PASA"
+    },
+    {
+      "numero": 4,
+      "texto": "La convencion esta documentada de modo que otra persona prediga donde esta cualquier objeto",
+      "comprobaciones": [
+        3,
+        4,
+        6
+      ],
+      "resultado": "PASA"
+    },
+    {
+      "numero": 5,
+      "texto": "La capa cruda se declara inmutable y nadie la ha editado",
+      "comprobaciones": [
+        8
+      ],
+      "resultado": "PASA"
+    },
+    {
+      "numero": 6,
+      "texto": "Es reproducible: otra persona clona en limpio, ejecuta y obtiene el mismo lago",
+      "comprobaciones": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "resultado": "PASA"
+    }
+  ],
+  "comprobaciones": [
+    {
+      "numero": 1,
+      "titulo": "Las tres capas del lago existen",
+      "resultado": "PASA",
+      "detalles": [
+        {
+          "marca": "ok",
+          "texto": "capa cruda     -> cubo lago-cruda"
+        },
+        {
+          "marca": "ok",
+          "texto": "capa refinada  -> cubo lago-refinada"
+        },
+        {
+          "marca": "ok",
+          "texto": "capa curada    -> cubo lago-curada"
+        }
+      ]
+    },
+    {
+      "numero": 2,
+      "titulo": "El versionado esta donde la configuracion lo declara",
+      "resultado": "PASA",
+      "detalles": [
+        {
+          "marca": "ok",
+          "texto": "lago-cruda       versionado ACTIVO, como corresponde a la cruda"
+        },
+        {
+          "marca": "ok",
+          "texto": "lago-refinada    sin versionado, correcto: esta capa se regenera"
+        },
+        {
+          "marca": "ok",
+          "texto": "lago-curada      sin versionado, correcto: esta capa se regenera"
+        }
+      ]
+    },
+    {
+      "numero": 3,
+      "titulo": "Toda clave de datos cumple la convencion de rutas",
+      "resultado": "PASA",
+      "detalles": [
+        {
+          "marca": "--",
+          "texto": "objetos de datos encontrados: 1"
+        },
+        {
+          "marca": "ok",
+          "texto": "secop2_procesos/anio=2026/mes=08/dia=19/secop2_procesos_20260819.csv"
+        }
+      ]
+    },
+    {
+      "numero": 4,
+      "titulo": "Cada objeto de datos tiene su manifiesto hermano",
+      "resultado": "PASA",
+      "detalles": [
+        {
+          "marca": "ok",
+          "texto": "secop2_procesos_20260819.csv  ->  secop2_procesos_20260819.csv.manifiesto.json"
+        }
+      ]
+    },
+    {
+      "numero": 5,
+      "titulo": "El contenido del lago coincide con su sha256 declarado",
+      "resultado": "PASA",
+      "detalles": [
+        {
+          "marca": "ok",
+          "texto": "secop2_procesos_20260819.csv  sha256 37b3b013f61e6b71...  (54.7 MiB)"
+        }
+      ]
+    },
+    {
+      "numero": 6,
+      "titulo": "Cada cubo trae su _LEEME.txt con la convencion",
+      "resultado": "PASA",
+      "detalles": [
+        {
+          "marca": "ok",
+          "texto": "lago-cruda       _LEEME.txt (2.3 KiB)"
+        },
+        {
+          "marca": "ok",
+          "texto": "lago-refinada    _LEEME.txt (1.1 KiB)"
+        },
+        {
+          "marca": "ok",
+          "texto": "lago-curada      _LEEME.txt (919.0 B)"
+        }
+      ]
+    },
+    {
+      "numero": 7,
+      "titulo": "Hay evidencia de que una version anterior se recupera",
+      "resultado": "PASA",
+      "detalles": [
+        {
+          "marca": "ok",
+          "texto": "_evidencia/prueba-de-versionado.txt  2 versiones; la anterior (2dd9f646-480) se leyo, 429 bytes"
+        },
+        {
+          "marca": "--",
+          "texto": "detalle completo en docs/evidencia_versionado.json"
+        }
+      ]
+    },
+    {
+      "numero": 8,
+      "titulo": "Ningun objeto de datos ha sido sobrescrito",
+      "resultado": "PASA",
+      "detalles": [
+        {
+          "marca": "ok",
+          "texto": "secop2_procesos_20260819.csv  una sola version"
+        }
+      ]
+    },
+    {
+      "numero": 9,
+      "titulo": "Reejecutar no ha duplicado el dato",
+      "resultado": "PASA",
+      "detalles": [
+        {
+          "marca": "ok",
+          "texto": "1 objeto(s) de datos, 1 contenido(s) distinto(s): sin duplicados"
+        }
+      ]
+    }
+  ],
+  "inventario": {
+    "lago-cruda": [
+      {
+        "clave": "_LEEME.txt",
+        "bytes": 2405,
+        "modificado": "2026-08-19T17:26:49.274000+00:00"
+      },
+      {
+        "clave": "_evidencia/prueba-de-versionado.txt",
+        "bytes": 436,
+        "modificado": "2026-08-19T17:28:00.583000+00:00"
+      },
+      {
+        "clave": "secop2_procesos/anio=2026/mes=08/dia=19/secop2_procesos_20260819.csv",
+        "bytes": 57305275,
+        "modificado": "2026-08-19T17:27:59.609000+00:00"
+      },
+      {
+        "clave": "secop2_procesos/anio=2026/mes=08/dia=19/secop2_procesos_20260819.csv.manifiesto.json",
+        "bytes": 3723,
+        "modificado": "2026-08-19T17:27:59.617000+00:00"
+      }
+    ],
+    "lago-refinada": [
+      {
+        "clave": "_LEEME.txt",
+        "bytes": 1138,
+        "modificado": "2026-08-19T17:26:49.295000+00:00"
+      }
+    ],
+    "lago-curada": [
+      {
+        "clave": "_LEEME.txt",
+        "bytes": 919,
+        "modificado": "2026-08-19T17:26:49.319000+00:00"
+      }
+    ]
+  }
+}

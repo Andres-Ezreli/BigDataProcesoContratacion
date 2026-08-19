@@ -1,0 +1,35 @@
+{
+  "_generado_por": "src/ingesta/cargar_cruda.py",
+  "_no_editar": "Se regenera en cada corrida.",
+  "instante_utc": "2026-08-19T17:26:49.323851+00:00",
+  "resultado": "cargada",
+  "capas": [
+    {
+      "capa": "cruda",
+      "cubo": "lago-cruda",
+      "estado": "creado",
+      "versionado": true
+    },
+    {
+      "capa": "refinada",
+      "cubo": "lago-refinada",
+      "estado": "creado",
+      "versionado": false
+    },
+    {
+      "capa": "curada",
+      "cubo": "lago-curada",
+      "estado": "creado",
+      "versionado": false
+    }
+  ],
+  "objeto": {
+    "cubo": "lago-cruda",
+    "clave": "secop2_procesos/anio=2026/mes=08/dia=19/secop2_procesos_20260819.csv",
+    "uri": "s3://lago-cruda/secop2_procesos/anio=2026/mes=08/dia=19/secop2_procesos_20260819.csv",
+    "sha256": "37b3b013f61e6b71a2c843cb3ccdfaf6366ea723279d7e9cb342727c0862efe0",
+    "bytes": 57305275,
+    "filas": 62916,
+    "columnas": 59
+  }
+}

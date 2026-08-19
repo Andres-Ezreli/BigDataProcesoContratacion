@@ -1,0 +1,41 @@
+{
+  "_comentario": "Unico archivo de configuracion de T4. Todo lo demas se deriva de aqui. Cambien estos valores y vuelvan a ejecutar: ningun numero esta escrito a mano dentro del codigo.",
+  "fuente": {
+    "nombre": "[[COMPLETAR: nombre de la fuente consolidada del equipo, la misma de T1-T3]]",
+    "ruta_local": "datos/muestra.csv",
+    "ruta_hdfs": "/t4/entrada",
+    "delimitador": ",",
+    "tiene_encabezado": true,
+    "columna_clave": "departamento",
+    "indice_clave": 1,
+    "columna_valor": "valor_contrato",
+    "indice_valor": 4,
+    "normalizar_clave": true,
+    "clave_vacia": "(SIN DATO)",
+    "quitar_simbolos": [
+      "$",
+      " ",
+      "%"
+    ],
+    "separador_miles": ".",
+    "separador_decimal": ","
+  },
+  "agregacion": {
+    "tipo": "promedio",
+    "pregunta": "[[COMPLETAR: la pregunta de negocio que responde la agregacion, en una frase. Ej: cual es el valor promedio de contrato por departamento]]",
+    "unidad_valor": "[[COMPLETAR: COP, mm, personas...]]",
+    "decimales_salida": 2
+  },
+  "cluster": {
+    "_nota": "Estos tres valores determinan la estimacion CON combinador. Ajustenlos a lo que de verdad reporte el trabajo: el numero de mappers aparece en la salida como 'number of splits'.",
+    "nodos": 3,
+    "mappers": null,
+    "tamano_bloque_mb": 128,
+    "reducers": 3,
+    "compresion_salida_map": false
+  },
+  "estimacion": {
+    "_nota": "Sobrecarga por registro del formato IFile de Hadoop (prefijos de longitud). 2 bytes es la aproximacion razonable para claves y valores cortos.",
+    "overhead_por_registro_bytes": 2
+  }
+}

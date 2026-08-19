@@ -1,0 +1,161 @@
+{
+  "_nota": "Generado por src/mezcla/perfilar.py. No editar a mano.",
+  "entrada": "datos/muestra.csv",
+  "bytes_entrada": 1574936,
+  "registros_leidos": 20001,
+  "registros_validos": 20000,
+  "registros_descartados": 1,
+  "claves_distintas": 20,
+  "bytes_clave_promedio": 10.01615,
+  "bytes_valor_map_promedio": 12.8534,
+  "sesgo": {
+    "conteo_maximo": 6738,
+    "conteo_minimo": 35,
+    "conteo_promedio": 1000.0,
+    "razon_max_promedio": 6.738,
+    "participacion_clave_mayor": 0.3369,
+    "participacion_top3": 0.62425
+  },
+  "distribucion": [
+    {
+      "clave": "BOGOTA D.C.",
+      "conteo": 6738,
+      "suma": 378228155049.5896,
+      "bytes_clave": 11,
+      "hash_java": -1083137933
+    },
+    {
+      "clave": "ANTIOQUIA",
+      "conteo": 3618,
+      "suma": 196761135551.40988,
+      "bytes_clave": 9,
+      "hash_java": 681077993
+    },
+    {
+      "clave": "VALLE DEL CAUCA",
+      "conteo": 2129,
+      "suma": 114418053863.5902,
+      "bytes_clave": 15,
+      "hash_java": -1675790982
+    },
+    {
+      "clave": "CUNDINAMARCA",
+      "conteo": 1624,
+      "suma": 85968461864.11998,
+      "bytes_clave": 12,
+      "hash_java": 1956530568
+    },
+    {
+      "clave": "SANTANDER",
+      "conteo": 1173,
+      "suma": 64737680397.48004,
+      "bytes_clave": 9,
+      "hash_java": 596768912
+    },
+    {
+      "clave": "ATLANTICO",
+      "conteo": 1006,
+      "suma": 53477498888.04003,
+      "bytes_clave": 9,
+      "hash_java": -486935801
+    },
+    {
+      "clave": "BOLIVAR",
+      "conteo": 603,
+      "suma": 29185755064.040012,
+      "bytes_clave": 7,
+      "hash_java": 779850813
+    },
+    {
+      "clave": "NARINO",
+      "conteo": 598,
+      "suma": 34966498191.49999,
+      "bytes_clave": 6,
+      "hash_java": -1999349141
+    },
+    {
+      "clave": "TOLIMA",
+      "conteo": 420,
+      "suma": 20082944153.870007,
+      "bytes_clave": 6,
+      "hash_java": -1814823732
+    },
+    {
+      "clave": "HUILA",
+      "conteo": 397,
+      "suma": 19020833941.320004,
+      "bytes_clave": 5,
+      "hash_java": 69098321
+    },
+    {
+      "clave": "CALDAS",
+      "conteo": 385,
+      "suma": 23713341115.41001,
+      "bytes_clave": 6,
+      "hash_java": 1980513544
+    },
+    {
+      "clave": "CESAR",
+      "conteo": 226,
+      "suma": 11345423659.609999,
+      "bytes_clave": 5,
+      "hash_java": 64013346
+    },
+    {
+      "clave": "BOYACA",
+      "conteo": 209,
+      "suma": 10992942789.269993,
+      "bytes_clave": 6,
+      "hash_java": 1965198131
+    },
+    {
+      "clave": "CAUCA",
+      "conteo": 206,
+      "suma": 10697301880.070005,
+      "bytes_clave": 5,
+      "hash_java": 63896149
+    },
+    {
+      "clave": "RISARALDA",
+      "conteo": 186,
+      "suma": 9114535727.45,
+      "bytes_clave": 9,
+      "hash_java": -1219245675
+    },
+    {
+      "clave": "QUINDIO",
+      "conteo": 181,
+      "suma": 9949449366.039995,
+      "bytes_clave": 7,
+      "hash_java": 1376640385
+    },
+    {
+      "clave": "META",
+      "conteo": 168,
+      "suma": 7505912184.700001,
+      "bytes_clave": 4,
+      "hash_java": 2362885
+    },
+    {
+      "clave": "AMAZONAS",
+      "conteo": 62,
+      "suma": 2642479078.6799974,
+      "bytes_clave": 8,
+      "hash_java": -1116696266
+    },
+    {
+      "clave": "GUAINIA",
+      "conteo": 36,
+      "suma": 2192203414.06,
+      "bytes_clave": 7,
+      "hash_java": 1084010640
+    },
+    {
+      "clave": "VAUPES",
+      "conteo": 35,
+      "suma": 1819117225.14,
+      "bytes_clave": 6,
+      "hash_java": -1770220108
+    }
+  ]
+}

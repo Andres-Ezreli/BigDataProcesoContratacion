@@ -1,0 +1,70 @@
+{
+  "_generado_por": "src/ingesta/demostrar_versionado.py",
+  "_no_editar": "Se regenera en cada corrida.",
+  "_que_demuestra": "Que el versionado esta activo en la capa cruda y que, tras sobrescribir y tras borrar, el contenido anterior sigue siendo recuperable byte a byte.",
+  "instante_utc": "2026-08-19T17:28:00.641372+00:00",
+  "cubo": "lago-cruda",
+  "versionado_activo": true,
+  "clave_sonda": "_evidencia/prueba-de-versionado.txt",
+  "_por_que_una_sonda": "La capa cruda es inmutable. La demostracion no se hace sobre el dato del proyecto: se hace sobre un objeto de prueba fuera del prefijo de la fuente.",
+  "pasos": [
+    {
+      "paso": 1,
+      "accion": "escritura inicial",
+      "version_id": "2dd9f646-4801-4899-9a1f-d13f8ecf26ff",
+      "sha256": "b4a1dd302f3f85abe4caad7d4bd413c3f11b491c698af0028ff6b683eaf37291",
+      "bytes": 429
+    },
+    {
+      "paso": 2,
+      "accion": "sobrescritura",
+      "version_id": "9be35f41-0860-43ef-a8f3-0d7fe22ddf76",
+      "sha256": "29ff408ecb484b6fbde71f9ff6e2d488cf360a5c74364698e3bf321d1e916490",
+      "bytes": 436
+    },
+    {
+      "paso": 4,
+      "accion": "recuperacion de la version anterior",
+      "version_id": "2dd9f646-4801-4899-9a1f-d13f8ecf26ff",
+      "sha256": "b4a1dd302f3f85abe4caad7d4bd413c3f11b491c698af0028ff6b683eaf37291",
+      "identico_al_original": true
+    },
+    {
+      "paso": 5,
+      "accion": "borrado logico",
+      "objeto_visible_tras_borrar": false,
+      "marcadores_de_borrado": 1,
+      "version_2_sigue_legible": true
+    },
+    {
+      "paso": 6,
+      "accion": "restauracion",
+      "objeto_restaurado": true
+    }
+  ],
+  "versiones_de_la_sonda": [
+    {
+      "tipo": "version",
+      "version_id": "9be35f41-0860-43ef-a8f3-0d7fe22ddf76",
+      "actual": true,
+      "bytes": 436,
+      "modificado": "2026-08-19T17:28:00.583000+00:00"
+    },
+    {
+      "tipo": "version",
+      "version_id": "2dd9f646-4801-4899-9a1f-d13f8ecf26ff",
+      "actual": false,
+      "bytes": 429,
+      "modificado": "2026-08-19T17:28:00.575000+00:00"
+    }
+  ],
+  "objeto_de_datos": {
+    "clave": "secop2_procesos/anio=2026/mes=08/dia=19/secop2_procesos_20260819.csv",
+    "versiones": 1,
+    "inmutabilidad_respetada": true,
+    "version_ids": [
+      "fd8636ab-2804-4d9d-a62d-37ef9a7f2b0c"
+    ]
+  },
+  "veredicto": "VERSIONADO DEMOSTRADO"
+}

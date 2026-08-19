@@ -1,0 +1,1 @@
+Aqui va la ficha T1 del integrante 2 (sus resultados de S01: mediciones.csv, _resultados.json y los tres niveles). Debe subirla esa persona con su propio commit; ver docs/consolidacion_repositorio.md seccion C.

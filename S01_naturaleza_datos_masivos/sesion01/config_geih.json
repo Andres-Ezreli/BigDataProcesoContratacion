@@ -1,0 +1,7 @@
+{
+  "_instruccion": "Paso 2.3.4 de la guia: ANTES de cargar nada, abra el diccionario de variables del paquete de la GEIH y anote aqui cuantas columnas tiene el archivo que va a usar. El script compara ese numero con lo que pandas realmente lee. Si no coinciden, esa discrepancia es evidencia de variedad y hay que reportarla, no corregirla.",
+  "periodo": "",
+  "archivo_elegido": "",
+  "columnas_segun_diccionario": null,
+  "notas": ""
+}

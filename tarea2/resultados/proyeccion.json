@@ -1,0 +1,181 @@
+{
+  "generado": "2026-08-03",
+  "entradas": {
+    "fuente": "SECOP II - Procesos de Contratacion",
+    "conjunto": "datos.gov.co / p6dx-8zbt",
+    "formato_declarado": "CSV UTF-8 delimitado por comas, esquema plano, 59 columnas",
+    "licencia": "Datos Abiertos de Colombia - Ley 1712 de 2014, uso libre con atribucion",
+    "muestra_gib": 0.194714,
+    "muestra_filas": 200000,
+    "total_filas": 8878158,
+    "filas_anio_base": 1531557,
+    "filas_anio_final": 1934805,
+    "anios_cagr": 2,
+    "meses_proyeccion": 12,
+    "g_anual_cota_alta": 0.312,
+    "bloque_mib": 128,
+    "factores_replica": [
+      1,
+      2,
+      3
+    ],
+    "nodos_datanode": 3,
+    "compresion_conservadora": 5.0,
+    "compresion_optimista": 10.0,
+    "precio_nube_usd_gb_mes": 0.023,
+    "precio_disco_usd_tb": 12.0,
+    "multiplicador_tco_onprem": 3.0,
+    "trm_cop_usd": 3144.14
+  },
+  "intermedios": {
+    "S0_gib": 8.6435,
+    "S0_gb": 9.2809,
+    "factor_escalado_muestra": 44.39079,
+    "g_anual": 0.123963,
+    "g_mensual": 0.009786,
+    "comprobacion_(1+gm)^12": 1.123963,
+    "V12_gib": 9.715,
+    "V12_gb": 10.4314,
+    "incremento_anual_gib": 1.0715,
+    "incremento_mes_1_mib": 86.62,
+    "incremento_mes_12_mib": 96.41
+  },
+  "tabla_proyeccion": [
+    {
+      "R": 1,
+      "volumen_logico_12m_gib": 9.715,
+      "almacenamiento_fisico_gib": 9.715,
+      "almacenamiento_fisico_gb": 10.4314,
+      "bloques_128mib_archivo_unico": 78,
+      "nodos_caidos_tolerados": 0,
+      "min_datanodes_requeridos": 1,
+      "costo_nube_usd_anio": 2.88,
+      "costo_nube_cop_anio": 9052.0,
+      "costo_disco_crudo_usd": 0.13,
+      "costo_disco_tco_usd": 0.38
+    },
+    {
+      "R": 2,
+      "volumen_logico_12m_gib": 9.715,
+      "almacenamiento_fisico_gib": 19.43,
+      "almacenamiento_fisico_gb": 20.8628,
+      "bloques_128mib_archivo_unico": 156,
+      "nodos_caidos_tolerados": 1,
+      "min_datanodes_requeridos": 2,
+      "costo_nube_usd_anio": 5.76,
+      "costo_nube_cop_anio": 18104.0,
+      "costo_disco_crudo_usd": 0.25,
+      "costo_disco_tco_usd": 0.75
+    },
+    {
+      "R": 3,
+      "volumen_logico_12m_gib": 9.715,
+      "almacenamiento_fisico_gib": 29.145,
+      "almacenamiento_fisico_gb": 31.2942,
+      "bloques_128mib_archivo_unico": 234,
+      "nodos_caidos_tolerados": 2,
+      "min_datanodes_requeridos": 3,
+      "costo_nube_usd_anio": 8.64,
+      "costo_nube_cop_anio": 27157.0,
+      "costo_disco_crudo_usd": 0.38,
+      "costo_disco_tco_usd": 1.13
+    }
+  ],
+  "bloques": {
+    "tamano_bloque_mib": 128,
+    "archivo_unico_r1": 78,
+    "archivo_unico_r3": 234,
+    "particion_mensual_base_r1": 70,
+    "particion_mensual_nuevos_r1": 12,
+    "particion_mensual_total_r1": 82,
+    "particion_mensual_total_r3": 246,
+    "sobrecosto_bloques_por_particionar": 4,
+    "bloques_por_archivo_mensual": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "compresion": {
+    "conservadora_5x": {
+      "factor": 5.0,
+      "volumen_logico_gib": 1.943,
+      "fisico_r3_gib": 5.829,
+      "bloques_r1": 16,
+      "costo_nube_r3_usd_anio": 1.73
+    },
+    "optimista_10x": {
+      "factor": 10.0,
+      "volumen_logico_gib": 0.9715,
+      "fisico_r3_gib": 2.9145,
+      "bloques_r1": 8,
+      "costo_nube_r3_usd_anio": 0.86
+    }
+  },
+  "sensibilidad_g": {
+    "g_base_cagr_2023_2025": {
+      "g_anual": 0.123963,
+      "g_mensual": 0.009786,
+      "v12_gib": 9.715,
+      "fisico_r3_gib": 29.145
+    },
+    "g_cota_alta_cagr_2021_2025": {
+      "g_anual": 0.312,
+      "g_mensual": 0.022887,
+      "v12_gib": 11.3403,
+      "fisico_r3_gib": 34.0208
+    },
+    "g_cero_fuente_congelada": {
+      "g_anual": 0.0,
+      "g_mensual": 0.0,
+      "v12_gib": 8.6435,
+      "fisico_r3_gib": 25.9305
+    }
+  },
+  "punto_de_quiebre_tercera_replica": {
+    "umbral_100_usd_anio": {
+      "volumen_logico_gb": 362.3,
+      "volumen_logico_tb": 0.362,
+      "veces_el_volumen_actual": 34.7,
+      "anios_a_g_base": 30.4,
+      "anios_a_g_cota_alta": 13.1
+    },
+    "umbral_1000_usd_anio": {
+      "volumen_logico_gb": 3623.2,
+      "volumen_logico_tb": 3.623,
+      "veces_el_volumen_actual": 347.3,
+      "anios_a_g_base": 50.1,
+      "anios_a_g_cota_alta": 21.5
+    },
+    "umbral_10000_usd_anio": {
+      "volumen_logico_gb": 36231.9,
+      "volumen_logico_tb": 36.232,
+      "veces_el_volumen_actual": 3473.4,
+      "anios_a_g_base": 69.8,
+      "anios_a_g_cota_alta": 30.0
+    }
+  },
+  "palancas_de_ahorro_gib": {
+    "csv_plano_R3_(base)": 29.145,
+    "csv_plano_R2_(bajar_una_replica)": 19.43,
+    "csv_plano_R1_(sin_replica)": 9.715,
+    "parquet_snappy_5x_R3_(comprimir)": 5.829,
+    "parquet_snappy_10x_R3": 2.9145
+  },
+  "palancas_de_ahorro_pct_vs_csv_R3": {
+    "csv_plano_R3_(base)": 0.0,
+    "csv_plano_R2_(bajar_una_replica)": 33.3,
+    "csv_plano_R1_(sin_replica)": 66.7,
+    "parquet_snappy_5x_R3_(comprimir)": 80.0,
+    "parquet_snappy_10x_R3": 90.0
+  }
+}

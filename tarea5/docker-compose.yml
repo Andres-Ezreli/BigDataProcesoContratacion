@@ -1,0 +1,53 @@
+# ---------------------------------------------------------------------------
+# El almacenamiento de objetos del lago.
+#
+# MinIO habla el mismo protocolo que S3, asi que el mismo script de boto3 que
+# corre aqui corre contra S3 real cambiando una linea de config/lago.json.
+# Levantar esto es el unico requisito de infraestructura de la tarea.
+#
+#   docker compose up -d      levantar
+#   docker compose down       apagar (los datos se conservan en el volumen)
+#   docker compose down -v    apagar y BORRAR el lago entero
+#
+# Consola web: http://localhost:9001  (usuario y clave, los de abajo)
+# ---------------------------------------------------------------------------
+
+services:
+  almacen:
+    # Tag fijo, no 'latest'. El criterio 6 pide que otra persona obtenga el
+    # mismo lago: con 'latest' cada quien levantaria una version distinta.
+    #
+    # Se usa quay.io, que es el registro propio de MinIO, y no Docker Hub.
+    # Los dos publican la misma imagen oficial, pero el CDN de Docker Hub
+    # (production.cloudfront.docker.com) resuelve mal detras de algunos DNS
+    # domesticos y la descarga falla con 'no such host'. Ver la seccion 9 de
+    # docs/T5_ejecucion.md. Si prefieren Docker Hub, es  minio/minio:<mismo tag>.
+    image: quay.io/minio/minio:RELEASE.2025-09-07T16-13-09Z
+    container_name: lago_almacen
+    command: server /data --console-address ":9001"
+    ports:
+      - "9000:9000"   # API S3   <- aqui apunta config/lago.json
+      - "9001:9001"   # consola web
+    environment:
+      # Credenciales de desarrollo local. No hay nada que proteger: este
+      # almacen solo escucha en localhost. Si alguien lo expone a la red,
+      # cambia estas dos lineas ANTES.
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+      # Que la consola no pida actualizar cada vez que se levanta.
+      MINIO_UPDATE: "off"
+    volumes:
+      # Volumen con nombre: el lago sobrevive a 'docker compose down'.
+      # Es deliberado. Un lago que se borra al apagar el portatil no es un lago.
+      - lago_datos:/data
+    healthcheck:
+      test: ["CMD", "mc", "ready", "local"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+      start_period: 5s
+    restart: unless-stopped
+
+volumes:
+  lago_datos:
+    name: lago_datos

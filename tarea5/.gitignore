@@ -1,0 +1,62 @@
+# ---------------------------------------------------------------------------
+# T5 - que NO entra en git
+#
+# La idea de fondo, que conviene tener clara antes de tocar este archivo:
+#
+#     git guarda el CODIGO que construye el lago.
+#     el lago guarda el DATO.
+#
+# Nunca al reves. El dato crudo no se versiona en git: pesa cientos de MB,
+# GitHub rechaza cualquier archivo de mas de 100 MB, y ya esta versionado
+# donde tiene que estarlo, en el cubo lago-cruda. Quien clone este
+# repositorio no recibe el dato: recibe la receta para volver a construirlo.
+# ---------------------------------------------------------------------------
+
+# Cache local de descargas del portal. Se regenera solo.
+.descargas/
+
+# Copias locales de la fuente que alguien deje sueltas mientras prueba.
+*.csv
+*.csv.gz
+*.parquet
+!docs/**/*.csv
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+
+# ---------------------------------------------------------------------------
+# Credenciales. Aqui no deberia haber ninguna (las de desarrollo estan a la
+# vista en docker-compose.yml), pero si alguien crea un .env para apuntar a
+# un S3 real, que no se suba.
+# ---------------------------------------------------------------------------
+.env
+.env.*
+*.pem
+credenciales*.json
+
+# ---------------------------------------------------------------------------
+# Empaquetados y sistema operativo
+# ---------------------------------------------------------------------------
+*.zip
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*~
+
+# ---------------------------------------------------------------------------
+# SI se versiona, aunque sea generado: es la evidencia que se califica.
+#   docs/evidencia_ingesta.json
+#   docs/evidencia_versionado.json
+#   docs/evidencia_lago.md
+# No las agreguen aqui.
+# ---------------------------------------------------------------------------

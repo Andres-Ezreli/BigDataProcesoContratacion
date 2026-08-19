@@ -1,0 +1,4 @@
+R,volumen_logico_12m_gib,almacenamiento_fisico_gib,almacenamiento_fisico_gb,bloques_128mib_archivo_unico,nodos_caidos_tolerados,min_datanodes_requeridos,costo_nube_usd_anio,costo_nube_cop_anio,costo_disco_crudo_usd,costo_disco_tco_usd
+1,9.715,9.715,10.4314,78,0,1,2.88,9052.0,0.13,0.38
+2,9.715,19.43,20.8628,156,1,2,5.76,18104.0,0.25,0.75
+3,9.715,29.145,31.2942,234,2,3,8.64,27157.0,0.38,1.13

@@ -1,0 +1,12 @@
+# Dependencias de T5. Instalar con:
+#
+#     python3 -m pip install -r requisitos.txt
+#
+# Una sola dependencia real. boto3 arrastra botocore y s3transfer; no hace
+# falta declararlos aparte. Todo lo demas (descarga del portal, hashes,
+# manifiestos) sale de la biblioteca estandar de Python 3.8+.
+#
+# El rango esta acotado por arriba a proposito: boto3 2.x, cuando salga, puede
+# cambiar la firma de put_bucket_versioning o de list_object_versions, y el
+# criterio 6 exige que el clon limpio de dentro de un ano siga funcionando.
+boto3>=1.34,<2

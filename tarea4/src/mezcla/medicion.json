@@ -1,0 +1,27 @@
+{
+  "_comentario": "Peguen aqui los contadores que reporta el trabajo. Mientras esten en null, estimar.py imprime la estimacion y marca el contraste como pendiente. Como sacarlos: docs/T4_ejecucion.md, seccion 5.",
+
+  "sin_combinador": {
+    "job_id": "[[COMPLETAR: job_XXXXXXXXXXXXX_XXXX]]",
+    "reduce_shuffle_bytes": null,
+    "map_output_records": null,
+    "map_output_bytes": null,
+    "reduce_input_records": null
+  },
+
+  "con_combinador": {
+    "job_id": "[[COMPLETAR: job_XXXXXXXXXXXXX_XXXX]]",
+    "reduce_shuffle_bytes": null,
+    "map_output_records": null,
+    "map_output_bytes": null,
+    "combine_input_records": null,
+    "combine_output_records": null,
+    "reduce_input_records": null
+  },
+
+  "ejecucion": {
+    "mappers_reportados": null,
+    "reducers_usados": null,
+    "compresion_salida_map_activa": false
+  }
+}
