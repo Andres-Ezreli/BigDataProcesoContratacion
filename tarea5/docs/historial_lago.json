@@ -1,0 +1,89 @@
+{
+  "_generado_por": "src/ingesta/historial_lago.py",
+  "_no_editar": "Se regenera en cada corrida.",
+  "_que_es": "Historial completo de versiones del lago: el equivalente escrito de la captura de la consola.",
+  "instante_utc": "2026-08-19T17:45:43.468632+00:00",
+  "versionado_por_cubo": {
+    "lago-cruda": true,
+    "lago-refinada": false,
+    "lago-curada": false
+  },
+  "eventos_por_cubo": {
+    "lago-cruda": [
+      {
+        "cubo": "lago-cruda",
+        "clave": "_LEEME.txt",
+        "tipo": "escritura",
+        "version_id": "244630f4-f155-414d-8c60-9591d12f32ab",
+        "es_actual": true,
+        "bytes": 2405,
+        "instante": "2026-08-19T17:26:49.274000+00:00",
+        "sha256": null
+      },
+      {
+        "cubo": "lago-cruda",
+        "clave": "secop2_procesos/anio=2026/mes=08/dia=19/secop2_procesos_20260819.csv",
+        "tipo": "escritura",
+        "version_id": "fd8636ab-2804-4d9d-a62d-37ef9a7f2b0c",
+        "es_actual": true,
+        "bytes": 57305275,
+        "instante": "2026-08-19T17:27:59.609000+00:00",
+        "sha256": "37b3b013f61e6b71a2c843cb3ccdfaf6366ea723279d7e9cb342727c0862efe0"
+      },
+      {
+        "cubo": "lago-cruda",
+        "clave": "secop2_procesos/anio=2026/mes=08/dia=19/secop2_procesos_20260819.csv.manifiesto.json",
+        "tipo": "escritura",
+        "version_id": "229f29ea-b880-4065-8eb2-fb0e014e0fcc",
+        "es_actual": true,
+        "bytes": 3723,
+        "instante": "2026-08-19T17:27:59.617000+00:00",
+        "sha256": null
+      },
+      {
+        "cubo": "lago-cruda",
+        "clave": "_evidencia/prueba-de-versionado.txt",
+        "tipo": "escritura",
+        "version_id": "2dd9f646-4801-4899-9a1f-d13f8ecf26ff",
+        "es_actual": false,
+        "bytes": 429,
+        "instante": "2026-08-19T17:28:00.575000+00:00",
+        "sha256": null
+      },
+      {
+        "cubo": "lago-cruda",
+        "clave": "_evidencia/prueba-de-versionado.txt",
+        "tipo": "escritura",
+        "version_id": "9be35f41-0860-43ef-a8f3-0d7fe22ddf76",
+        "es_actual": true,
+        "bytes": 436,
+        "instante": "2026-08-19T17:28:00.583000+00:00",
+        "sha256": null
+      }
+    ],
+    "lago-refinada": [
+      {
+        "cubo": "lago-refinada",
+        "clave": "_LEEME.txt",
+        "tipo": "escritura",
+        "version_id": "null",
+        "es_actual": true,
+        "bytes": 1138,
+        "instante": "2026-08-19T17:26:49.295000+00:00",
+        "sha256": null
+      }
+    ],
+    "lago-curada": [
+      {
+        "cubo": "lago-curada",
+        "clave": "_LEEME.txt",
+        "tipo": "escritura",
+        "version_id": "null",
+        "es_actual": true,
+        "bytes": 919,
+        "instante": "2026-08-19T17:26:49.319000+00:00",
+        "sha256": null
+      }
+    ]
+  }
+}

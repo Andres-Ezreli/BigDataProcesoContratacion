@@ -6,7 +6,7 @@
 
 | | |
 |---|---|
-| Equipo | [[COMPLETAR: integrante 1, integrante 2, integrante 3]] |
+| Equipo | Gabriela Garay Beltrán · Juan Andrés Linero Bonnet · Kevin Enrique Darghan Chajín |
 | Repositorio | <https://github.com/Andres-Ezreli/BigDataProcesoContratacion> (carpeta `tarea5/`) |
 | Commit de entrega | [[COMPLETAR: hash corto — se sabe después de commitear; `git rev-parse --short HEAD`]] |
 | Fuente del proyecto | SECOP II — Procesos de Contratación (`p6dx-8zbt`), la misma de T1 a T4 |
@@ -160,7 +160,7 @@ La aplicamos como una prueba de verdad, no como una frase. Antes de entregar, al
 
 > **Respuestas.** (1) `s3://lago-cruda/secop2_procesos/anio=2027/mes=02/dia=02/secop2_procesos_20270202.csv`. (2) En el manifiesto hermano: la misma clave más `.manifiesto.json`; trae la URL exacta de descarga, el instante, el `sha256`, las filas y las columnas. (3) **En la capa refinada, nunca en la cruda** (sección 5). (4) `secop2_procesos_20260819_lote-02.csv`, en la misma partición, sin tocar el primero.
 >
-> **Resultado de la prueba:** [[COMPLETAR: quién la hizo, qué falló y qué se corrigió a raíz de eso. Si contestó las cuatro sin preguntar, escríbanlo; si preguntó algo, eso que preguntó es exactamente lo que falta escribir.]]
+> **Resultado de la prueba:** se registra en [`docs/prueba_del_tercero.md`](prueba_del_tercero.md), que es el formulario donde el tercero escribe sus cuatro respuestas antes de ver estas. Resumen: [[COMPLETAR: quién la hizo, cuántas acertó sin preguntar y qué se corrigió a raíz de eso. Si preguntó algo, eso que preguntó es exactamente lo que faltaba escribir.]]
 
 ### 2.6 El lago se explica desde dentro
 

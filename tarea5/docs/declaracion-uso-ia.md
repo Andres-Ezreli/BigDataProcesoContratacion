@@ -1,15 +1,15 @@
 # Declaración de uso de asistentes de inteligencia artificial
 
-**Tarea T5 · Sesión 5 · Equipo [[COMPLETAR]]**
+**Tarea T5 · Sesión 5 · Gabriela Garay Beltrán · Juan Andrés Linero Bonnet · Kevin Enrique Darghan Chajín**
 
 ## Qué se usó y para qué
 
 | Uso | Herramienta | Verificación realizada |
 |---|---|---|
-| Estructura del repositorio y de los scripts de ingesta | [[COMPLETAR]] | Revisión del equipo contra los seis criterios de aceptación del enunciado |
-| Implementación de `cargar_cruda.py`, `demostrar_versionado.py` y `verificar_lago.py` | [[COMPLETAR]] | Ejecutados de principio a fin contra el MinIO del equipo; `verificar_lago.py` devuelve código de salida 0 |
-| Redacción de la convención de rutas y del mapa de las tres capas | [[COMPLETAR]] | Sometida a la **prueba del tercero** (sección 2.5 de `T5_lago.md`): un integrante ajeno al código predijo la ruta de un objeto sin consultar a nadie |
-| Redacción del informe | [[COMPLETAR]] | Reescrito por el equipo; la justificación de la partición y de la regla de inmutabilidad son propias |
+| Estructura del repositorio y de los scripts de ingesta | Claude (Anthropic) | Revisión del equipo contra los seis criterios de aceptación del enunciado |
+| Implementación de `cargar_cruda.py`, `demostrar_versionado.py` y `verificar_lago.py` | Claude (Anthropic) | Ejecutados de principio a fin contra el MinIO del equipo; `verificar_lago.py` devuelve código de salida 0 |
+| Redacción de la convención de rutas y del mapa de las tres capas | Claude (Anthropic) | Sometida a la **prueba del tercero** (sección 2.5 de `T5_lago.md`): un integrante ajeno al código predijo la ruta de un objeto sin consultar a nadie |
+| Redacción del informe | Claude (Anthropic) | Reescrito por el equipo; la justificación de la partición y de la regla de inmutabilidad son propias |
 
 ## Qué no se delegó
 
@@ -26,4 +26,4 @@ Ninguna cifra ni ningún identificador del informe se transcribió de un asisten
 
 El cumplimiento de los seis criterios de aceptación no se declara: lo comprueba `src/ingesta/verificar_lago.py` releyendo el lago, y su código de salida es 0 o 1.
 
-Firman: [[COMPLETAR: los tres integrantes]]
+Firman: Gabriela Garay Beltrán, Juan Andrés Linero Bonnet, Kevin Enrique Darghan Chajín

@@ -129,9 +129,19 @@ print(comun.leer_objeto(s3, cubo, comun.clave_manifiesto(cfg, clave)).decode())
 PY
 ```
 
+## 6bis. Volcar el historial del lago
+
+```bash
+python3 src/ingesta/historial_lago.py
+```
+
+Recorre los tres cubos y escribe **todo lo que le ha pasado a cada objeto**: cada versión, cada marcador de borrado, con su `VersionId`, su tamaño, su instante y su `sha256`. Deja `docs/historial_lago.md` y `docs/historial_lago.json`.
+
+Es el equivalente escrito de la captura de pantalla, y tiene una ventaja sobre ella: se puede contrastar. Abran la consola en <http://localhost:9001>, miren el historial de versiones de cualquier clave, y los identificadores tienen que ser exactamente los mismos.
+
 ## 7. Qué llevarse al informe
 
-Después de ejecutar los pasos 3, 4 y 5 quedan cuatro archivos generados en `docs/`. **Ninguno se edita a mano**; los cuatro se regeneran en cada corrida:
+Después de ejecutar los pasos 3 a 6bis quedan seis archivos generados en `docs/`. **Ninguno se edita a mano**; los seis se regeneran en cada corrida:
 
 | Archivo | Qué aporta al informe |
 |---|---|
@@ -139,8 +149,12 @@ Después de ejecutar los pasos 3, 4 y 5 quedan cuatro archivos generados en `doc
 | `evidencia_versionado.md` | la tabla de `VersionId` — va en la sección 6.2 de `T5_lago.md` |
 | `evidencia_versionado.json` | lo mismo, con el detalle paso a paso |
 | `evidencia_lago.md` | la tabla de los seis criterios — va en la sección 10 de `T5_lago.md` |
+| `evidencia_lago.json` | lo mismo, con las nueve comprobaciones detalladas |
+| `historial_lago.md` | la línea de tiempo del lago y el historial versión a versión |
 
-Además, capturen **una pantalla de la consola de MinIO** que muestre el objeto en su ruta particionada y el historial de versiones de la sonda. Los `VersionId` de la captura tienen que ser los mismos del archivo generado; eso es lo que hace la evidencia verificable en vez de decorativa.
+El único documento de la entrega que **sí** se rellena a mano es [`prueba_del_tercero.md`](prueba_del_tercero.md), porque lo que registra es una observación sobre una persona, no una medición sobre el lago.
+
+Además, capturen **una pantalla de la consola de MinIO** que muestre el objeto en su ruta particionada y el historial de versiones de la sonda. Los `VersionId` de la captura tienen que ser los mismos de `historial_lago.md`; eso es lo que hace la evidencia verificable en vez de decorativa.
 
 ## 8. La secuencia completa, de cero
 
@@ -152,9 +166,10 @@ python3 -m pip install -r requisitos.txt
 python3 src/ingesta/cargar_cruda.py
 python3 src/ingesta/demostrar_versionado.py
 python3 src/ingesta/verificar_lago.py
+python3 src/ingesta/historial_lago.py
 ```
 
-Siete comandos. Si alguno falla en un clon limpio, el criterio 6 no se cumple y hay que arreglarlo antes de entregar, no explicarlo en el informe.
+Ocho comandos. Si alguno falla en un clon limpio, el criterio 6 no se cumple y hay que arreglarlo antes de entregar, no explicarlo en el informe.
 
 ## 9. Si algo falla
 
